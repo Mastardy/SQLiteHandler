@@ -1,0 +1,40 @@
+﻿<Page x:Class="SQLiteHandler.Pages.NewDatabasePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="NewDatabase" Width="720" Height="540">
+    <Grid Background="#1A1A1A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1.75*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="40" Foreground="#BBBBBB">New Database</TextBlock>
+            
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" x:Name="NewDatabaseTextBox" KeyDown="NewDatabase_OnKeyDown" Width="200" MaxLength="32" Height="40" Padding="5" FontSize="18" Background="#383838" Foreground="#BBBBBB" VerticalContentAlignment="Center" BorderThickness="0" />
+                <Button Grid.Column="2" x:Name="NewDatabaseButton" Click="NewDatabase_Create" Width="80" Height="40" Background="#BBBBBB" Foreground="#141414" FontSize="24">Create</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
